@@ -2,6 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>config-service</module>
+    </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -81,18 +85,143 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <!--消息总线spring cloud bus-->
-
-        <!--lombok-->
-
-        <!--swagger-->
-
-        <!--logstash-->
-
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!-- swagger -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
+        <!-- logstash -->
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>${logstash.version}</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
+            <!-- swagger -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <!--MySQL-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+
+            <!-- mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <!-- 验证码 -->
+            <dependency>
+                <groupId>com.github.axet</groupId>
+                <artifactId>kaptcha</artifactId>
+                <version>${kaptcha.version}</version>
+            </dependency>
+
+            <!-- 微信小程序 -->
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>weixin-java-miniapp</artifactId>
+                <version>${weixin.version}</version>
+            </dependency>
+
+            <!-- 微信支付 -->
+
+            <!-- jjwt -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+
+            <!-- 七牛云 -->
+            <dependency>
+                <groupId>com.qiniu</groupId>
+                <artifactId>qiniu-java-sdk</artifactId>
+                <version>${qiniu.version}</version>
+            </dependency>
+
+            <!--fastDfs-->
+            <dependency>
+                <groupId>com.github.tobato</groupId>
+                <artifactId>fastdfs-client</artifactId>
+                <version>${fastdfs-client.version}</version>
+            </dependency>
+
+            <!-- easyexcel -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+
+            <!-- guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <!-- 二维码相关 -->
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>core</artifactId>
+                <version>${zxing.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>javase</artifactId>
+                <version>${zxing.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>QRCode</groupId>
+                <artifactId>QRCode</artifactId>
+                <version>${qrCode.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
