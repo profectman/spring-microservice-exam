@@ -6,6 +6,7 @@
     <modules>
         <module>config-service</module>
         <module>gateway-service</module>
+        <module>common</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -15,7 +16,7 @@
     </parent>
     <groupId>com.jeeho</groupId>
     <artifactId>spring-microservice-exam</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>spring-microservice-exam</name>
     <description>project for exam</description>
 
@@ -127,6 +128,19 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!--common-core-->
+            <dependency>
+                <groupId>com.jeeho</groupId>
+                <artifactId>common-core</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jeeho</groupId>
+                <artifactId>common-basic</artifactId>
+                <version>${revision}</version>
             </dependency>
 
             <!-- swagger -->
