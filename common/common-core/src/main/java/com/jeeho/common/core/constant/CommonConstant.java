@@ -171,7 +171,7 @@ public class CommonConstant {
     /**
      * baskPackage
      */
-    public static final String BASE_PACKAGE = "com.github.tangyi";
+    public static final String BASE_PACKAGE = "com.jeeho";
 
     /**
      * 男

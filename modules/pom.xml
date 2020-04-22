@@ -9,13 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>common</artifactId>
+    <artifactId>modules</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>common-core</module>
-        <module>common-basic</module>
-        <module>common-security</module>
-        <module>common-feign</module>
+        <module>auth-service-parent</module>
+        <module>user-service-parent</module>
     </modules>
 
 

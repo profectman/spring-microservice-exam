@@ -3,19 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>spring-microservice-exam</artifactId>
+        <artifactId>modules</artifactId>
         <groupId>com.jeeho</groupId>
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>common</artifactId>
+    <artifactId>user-service-parent</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>common-core</module>
-        <module>common-basic</module>
-        <module>common-security</module>
-        <module>common-feign</module>
+        <module>user-service-api</module>
+        <module>user-service</module>
     </modules>
 
 

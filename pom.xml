@@ -7,6 +7,7 @@
         <module>config-service</module>
         <module>gateway-service</module>
         <module>common</module>
+        <module>modules</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -136,13 +137,36 @@
                 <artifactId>common-core</artifactId>
                 <version>${revision}</version>
             </dependency>
-
+            <!--common-baisc-->
             <dependency>
                 <groupId>com.jeeho</groupId>
                 <artifactId>common-basic</artifactId>
                 <version>${revision}</version>
             </dependency>
-
+            <!--common-security-->
+            <dependency>
+                <groupId>com.jeeho</groupId>
+                <artifactId>common-security</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <!--common-feign-->
+            <dependency>
+                <groupId>com.jeeho</groupId>
+                <artifactId>common-feign</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <!--auth-service-api-->
+            <dependency>
+                <groupId>com.jeeho</groupId>
+                <artifactId>auth-service-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <!--user-service-api-->
+            <dependency>
+                <groupId>com.jeeho</groupId>
+                <artifactId>user-service-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <!-- swagger -->
             <dependency>
                 <groupId>io.springfox</groupId>
